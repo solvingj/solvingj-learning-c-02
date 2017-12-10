@@ -10,7 +10,9 @@ class LearningC02Conan(ConanFile):
     generators = "cmake"
     url = "https://github.com/solvingj/learning-c-02"
     exports_sources = "include*", "src*"
-    requires = "libhandler/0.5@bincrafters/stable", \
-            "libuv/1.15.0@bincrafters/stable",
+    requires = "libuv/1.15.0@bincrafters/stable", \
+        "libhandler/0.5@bincrafters/stable", \
+        "Parson/0.1.0@bincrafters/stable"
+
 
 

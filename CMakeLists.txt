@@ -5,6 +5,8 @@ include(conan_include.cmake)
 
 add_executable(learning_c_02
 	src/main.c
+	src/clparse.c
+	src/parson_wrapper.c
 )
 
 target_include_directories(learning_c_02
@@ -13,8 +15,9 @@ target_include_directories(learning_c_02
 )
 
 target_link_libraries(learning_c_02
-	INTERFACE
-		${CONAN_LIBS}
+	CONAN_PKG::libuv
+	CONAN_PKG::libhandler
+	CONAN_PKG::Parson
 )
 
 #add_executable(learning_c_02_lib_uv_test
